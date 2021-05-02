@@ -1,0 +1,23 @@
+http://localhost:8080/usuario
+
+{
+"nome": "Jeh",
+"dataNascimento": "06-10-2010",
+"endereco": "Primeiro de Maio"
+}
+
+http://localhost:8080/emprestimo
+
+{
+ "usuario": {
+
+	"codigoLivro":1
+ },
+ "livro":{
+	"codigoLivro":2
+ },
+ "dataEmprestimo": "2021-01-01",
+ "dataDevolucao": "2021-12-02"
+
+}
+
