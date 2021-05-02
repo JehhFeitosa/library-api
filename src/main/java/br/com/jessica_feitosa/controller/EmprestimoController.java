@@ -10,13 +10,12 @@ import br.com.jessica_feitosa.servico.EmprestimoService;
 
 @RestController
 public class EmprestimoController {
-	
+
 	@Autowired
 	private EmprestimoService emprestimoService;
-	
-	@PostMapping("/emprestimo")
-	public void salvaEmprestimo(@RequestBody Emprestimo emprestimo) {
-		emprestimoService.salvarEmprestimo(emprestimo);
-	}
 
+	@PostMapping(value = "/emprestimo", consumes = "application/json")
+	public void save(@RequestBody Emprestimo emprestimo) {
+		emprestimoService.save(emprestimo);
+	}
 }
