@@ -14,12 +14,11 @@ public class EmprestimoService {
 	@Autowired
 	private EmprestimoRepository emprestimoRepository;
 
-	public void salvarEmprestimo(Emprestimo emprestimo) {
+	public void save(Emprestimo emprestimo) {
 		if (validaDataDevolucao(emprestimo.getDataEmprestimo(), emprestimo.getDataDevolucao())) {
 			emprestimoRepository.save(emprestimo);
 		} else
-			throw new IllegalArgumentException("Data de devolução é menor que a data do emprestimo");
-
+			throw new IllegalArgumentException("Data de devolução inválida");
 	}
 
 	private Boolean validaDataDevolucao(LocalDate dataEmprestimo, LocalDate dataDevolucao) {

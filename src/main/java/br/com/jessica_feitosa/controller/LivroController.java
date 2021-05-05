@@ -10,13 +10,13 @@ import br.com.jessica_feitosa.servico.LivroService;
 
 @RestController
 public class LivroController {
-	
+
 	@Autowired
 	private LivroService livroService;
-	
-	@PostMapping("/livro")
-	public void salvarLivro(@RequestBody Livro livro) {
-		livroService.salvarLivro(livro);
-	}
 
+	@PostMapping("/livro")
+	public void save(@RequestBody Livro livro) {
+		livroService.save(livro);
+	}
+	
 }
